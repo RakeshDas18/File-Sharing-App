@@ -4,7 +4,7 @@ function Files() {
   return (
     <div>
       <div>
-        <h1>File Name</h1>
+        <h1>File Name</h1>  
       </div>
     </div>
   )
