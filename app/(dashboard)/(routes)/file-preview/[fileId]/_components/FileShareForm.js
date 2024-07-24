@@ -44,12 +44,25 @@ function FileShareForm({ file, onPasswordSave }) {
     const shareFile = () => {
     // Construct the share URL
     const shareUrl = file?.shortUrl;
+    
+    // Construct the text to share
+    let shareText = `Check out this file: ${file?.fileName}`;
+    
+    // Append user's name if available
+    if (user?.fullName) {
+        shareText = `${user.fullName} wants you to check out this file: ${file?.fileName}`;
+    }
+    
+    // Append password if enabled
+    if (isPasswordEnable && password.length > 0) {
+        shareText += ` Password: ${password}`;
+    }
 
     // Check if navigator.share is supported (modern browsers)
     if (navigator.share) {
         navigator.share({
             title: `Share File: ${file?.fileName}`,
-            text: `Check out this file: ${file?.fileName}`,
+            text: shareText,
             url: shareUrl,
         })
         .then(() => console.log('Shared successfully'))
@@ -63,6 +76,7 @@ function FileShareForm({ file, onPasswordSave }) {
         window.open(shareUrl, '_blank');
     }
 };
+
     const sendEmail = () => {
         const data = {
             emailToSend: email,
