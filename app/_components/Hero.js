@@ -28,7 +28,7 @@ const Hero = () => {
 
                         <a
                             className="block w-full rounded border border-teal-600 px-12 py-3 text-sm font-medium text-white hover:bg-teal-600 hover:text-white focus:outline-none focus:ring active:bg-teal-500 sm:w-auto transition duration-300 ease-in-out"
-                            href="#"
+                            href="/about"
                         >
                             Learn More
                         </a>

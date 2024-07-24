@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const Header = () => {
@@ -7,7 +8,7 @@ const Header = () => {
             <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
                 <div className="flex h-16 items-center justify-between">
                     <div className="flex-1 md:flex md:items-center md:gap-12">
-                        <a className="block text-teal-400 dark:text-teal-400" href="#">
+                        <a className="block text-teal-400 dark:text-teal-400" href="/">
                             <span className="sr-only">Home</span>
                             <Image src='/logo.svg' width={75} height={25} />
                         </a>
@@ -19,7 +20,7 @@ const Header = () => {
                                 <li>
                                     <a
                                         className="text-gray-300 transition-colors duration-300 hover:text-gray-200"
-                                        href="#"
+                                        href="/"
                                     >
                                         Home
                                     </a>
@@ -28,25 +29,22 @@ const Header = () => {
                                 <li>
                                     <a
                                         className="text-gray-300 transition-colors duration-300 hover:text-gray-200"
-                                        href="#"
+                                        href="/upload"
                                     >
                                         Upload
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a
-                                        className="text-gray-300 transition-colors duration-300 hover:text-gray-200"
-                                        href="#"
-                                    >
+                                    <Link href='/about' className='text-gray-300 transition-colors duration-300 hover:text-gray-200'>
                                         About Us
-                                    </a>
+                                    </Link>
                                 </li>
 
                                 <li>
                                     <a
                                         className="text-gray-300 transition-colors duration-300 hover:text-gray-200"
-                                        href="#"
+                                        href="/contact"
                                     >
                                         Contact Us
                                     </a>
