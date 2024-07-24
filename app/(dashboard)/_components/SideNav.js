@@ -31,7 +31,7 @@ function SideNav({ onClose }) {
     const [activeIndex, setActiveIndex] = useState(0);
 
     useEffect(() => {
-        const currentPath = router.pathname;
+        const currentPath = router.pathname
         const currentIndex = menuList.findIndex(item => item.path === currentPath);
         if (currentIndex !== -1) {
             setActiveIndex(currentIndex);
