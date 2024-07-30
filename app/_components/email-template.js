@@ -70,7 +70,7 @@ export const EmailTemplate = ({
                 
 
                 <Text style={paragraph}>
-                  Now you can also share a file in File Sharing App RD
+                  Now you can also share a file in Secure Share
                 </Text>
                 <Text style={{ ...paragraph, marginTop: -5 }}>
                   Click the button below to access and download the file
@@ -99,7 +99,7 @@ export const EmailTemplate = ({
               color: "rgb(0,0,0, 0.7)",
             }}
           >
-            © 2024 | File Sharing App RD.
+            © 2024 | Secure Share.
           </Text>
         </Container>
       </Body>
