@@ -12,13 +12,11 @@ function FileView({params}) {
     const [file, setFile] = useState();
     useEffect(() => {
         params.fileId && getFileInfo()
-        console.log(params.fileId)
     })
     const getFileInfo = async () => {
         const docRef = doc(db, "uploadedFile", params?.fileId);
         const docSnap = await getDoc(docRef);
         if (docSnap.exists()) {
-          console.log("Document data:", docSnap.data());
           setFile(docSnap.data());
         } else {
           // docSnap.data() will be undefined in this case
