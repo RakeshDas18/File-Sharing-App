@@ -8,7 +8,7 @@ export async function POST(req) {
   try {
     const { data, error } = await resend.emails.send({
       from: 'FileSharingAppRD@resend.dev',
-      to: ['rakeshchandlqu@gmail.com'],
+      to: [''],
       subject: responce?.userName + " Share File With You",
       react: EmailTemplate({ responce }),
     });
