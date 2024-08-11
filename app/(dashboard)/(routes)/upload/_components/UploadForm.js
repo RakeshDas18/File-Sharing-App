@@ -7,9 +7,9 @@ function UploadForm({ uploadBtnClick, progress }) {
     const [errorMsg, setErrorMsg] = useState();
     const [file, setFile] = useState();
     const onFileSelect = (file) => {
-        if (file && file.size > 2000000) {
-            console.log("The file size is greater than 2MB");
-            setErrorMsg('Maximum file upload size is 2 MB');
+        if (file && file.size > 100000000) {
+            console.log("The file size is greater than 100MB");
+            setErrorMsg('Maximum file upload size is 100 MB');
             return;
         }
         setErrorMsg(null);
@@ -26,7 +26,7 @@ function UploadForm({ uploadBtnClick, progress }) {
                         </svg>
                         <p class="mb-2 text-sm md:text-2xl text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or
                             <strong className='text-blue-600'> drag</strong>  and <strong className='text-blue-600'> drop</strong></p>
-                        <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX SIZE: 2 MB)</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX SIZE: 100 MB)</p>
                     </div>
                     <input id="dropzone-file" type="file" class="hidden"
                         onChange={(event) => onFileSelect(event.target.files[0])} />
