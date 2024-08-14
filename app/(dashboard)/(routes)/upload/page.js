@@ -59,7 +59,7 @@ function Upload() {
   useEffect(() => {
     progress == 100 && setTimeout(() => {
       setUploadCompleted(true);
-    }, 2000)
+    }, 3000)
   }, [progress == 100])
 
   useEffect(() => {
@@ -67,7 +67,7 @@ function Upload() {
       const timer = setTimeout(() => {
         setUploadCompleted(false);
         router.push('/file-preview/' + fileDocId);
-      }, 2000);
+      }, 3000);
       return () => clearTimeout(timer); // Cleanup timeout
     }
   }, [uploadCompleted]);
