@@ -1,7 +1,7 @@
 import { SignIn, UserButton } from "@clerk/nextjs";
-import Image from "next/image";
+import Image from "next/image"
 
-export default function Page() {
+export default function Page () {
     return (
         < section className = "bg-white dark:bg-gray-900" >
             <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
