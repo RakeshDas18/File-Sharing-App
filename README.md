@@ -11,7 +11,6 @@
 - **Easy File Upload and Share**: Simple user interface for uploading and sharing files.
 - **Real-Time Storage**: Firebase ensures fast and reliable file storage.
 - **Responsive UI**: Designed with Tailwind CSS for a smooth, responsive experience on all devices.
-- 
 ---
 
 ## Technologies Used
@@ -32,7 +31,7 @@
 
 ```
 git clone https://github.com/yourusername/Secure-Share.git
-cd file-sharing-app
+cd secure-share
 ```
 
 ### 2. Install dependencies:
